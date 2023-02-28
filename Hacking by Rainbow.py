@@ -16,7 +16,7 @@ def hash_password_hack(input_file_name, output_file_name):
                 dic[h] = temp
             list1 = []
             for name1,hash1 in reader:
-                username = pop(name1)
+                username = name1
                 password = hash1
                 list1 = [username ,password]
                 writer.writerow(list1)
