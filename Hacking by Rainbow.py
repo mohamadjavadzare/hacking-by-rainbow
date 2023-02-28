@@ -17,6 +17,9 @@ def hash_password_hack(input_file_name, output_file_name):
             list1 = []
             for name1,hash1 in reader:
                 username = name1
-                password = hash1
+                password = dic[hash1]
                 list1 = [username ,password]
                 writer.writerow(list1)
+                
+# call upper funtion that i coded with two files (input and output csv txt)
+#hash_password_hack("inputcsv.txt","outputscv.txt")
