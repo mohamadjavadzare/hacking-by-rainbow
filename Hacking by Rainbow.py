@@ -15,8 +15,8 @@ def hash_password_hack(input_file_name, output_file_name):
                 h = h.hexdigest()
                 dic[h] = temp
             list1 = []
-            for row in reader:
-                username = row.pop(0)
-                password = dic[row[0]]
+            for name1,hash1 in reader:
+                username = pop(name1)
+                password = hash1
                 list1 = [username ,password]
                 writer.writerow(list1)
